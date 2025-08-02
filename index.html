@@ -4,75 +4,126 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Maria Gabriela Hernandez — Miami Real Estate</title>
-  <meta name="description" content="Maria Gabriela Hernandez helps clients buy, sell, rent, and invest in Miami real estate — local and international. Schedule a consultation today." />
+  <meta name="description" content="Commercial & Residential real estate in Miami and beyond. Maria Gabriela Hernandez helps clients buy, sell, rent, and invest — locally and internationally." />
 
-  <!-- Open Graph / Twitter for link previews -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Maria Gabriela Hernandez — Miami Real Estate">
-  <meta property="og:description" content="Buy • Sell • Rent • Invest — Miami & International.">
-  <meta property="og:image" content="https://images.pexels.com/photos/29360684/pexels-photo-29360684.jpeg?auto=compress&cs=tinysrgb&w=1600">
+  <meta property="og:description" content="Commercial • Industrial • Residential — Miami & International.">
+  <meta property="og:image" content="https://images.pexels.com/photos/258160/pexels-photo-258160.jpeg?auto=compress&cs=tinysrgb&w=1600">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
   <style>
     :root{
-      --bg:#0b1220;
-      --ink:#0f172a;
-      --ink-2:#334155;
-      --brand:#00c2c7;    /* Miami teal */
-      --brand-2:#ff6b6b;  /* Coral accent */
-      --paper:#ffffff;
+      /* Brand */
+      --ocean:#0e67b2;  /* ocean blue */
+      --gold:#d4af37;   /* gold */
+      --paper:#ffffff;  /* white */
+
+      /* Neutrals */
+      --ink:#0b1220;
       --muted:#64748b;
-      --radius:14px;
-      --shadow:0 10px 25px rgba(2, 8, 23, .12);
+      --line:#e5e7eb;
+
+      /* UI */
+      --radius:16px;
+      --shadow:0 10px 30px rgba(2,8,23,.12);
       --max:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0}
-    body{font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;color:#0b1220;background:#f8fafc}
-    a{color:var(--brand);text-decoration:none}
+    body{
+      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      color:var(--ink);
+      background:#f8fafc;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:var(--ocean);text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:var(--max);margin-inline:auto;padding:24px}
-    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid #e5e7eb}
+
+    .wrap{max-width:var(--max);margin-inline:auto;padding:20px}
+
+    header{
+      position:sticky;top:0;z-index:20;
+      background:rgba(255,255,255,.9);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
     nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    nav .logo{font-weight:800;letter-spacing:.2px}
-    nav .logo span{color:var(--brand)}
-    nav .links{display:flex;gap:18px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;border:1px solid transparent;background:var(--brand);color:#001015;font-weight:700;box-shadow:var(--shadow)}
-    .btn.outline{background:transparent;border-color:#cbd5e1;color:var(--ink)}
+    .logo{font-weight:900;letter-spacing:.2px}
+    .logo span{color:var(--ocean)}
+    .links{display:flex;gap:18px;flex-wrap:wrap}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 18px;border-radius:999px;
+      border:1px solid transparent;
+      background:linear-gradient(90deg,var(--ocean),#1098e6);
+      color:white;font-weight:700;box-shadow:var(--shadow);
+      transition:transform .08s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.gold{
+      background:var(--gold);color:#1a1a1a;border-color:#b89627;
+    }
+    .btn.outline{
+      background:transparent;border-color:var(--ocean);color:var(--ocean);box-shadow:none;font-weight:700;
+    }
+
     .hero{
       position:relative;min-height:72vh;display:grid;place-items:center;color:white;
-      background:url('https://images.pexels.com/photos/29360684/pexels-photo-29360684.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80') center/cover no-repeat;
+      background:url('https://images.pexels.com/photos/208736/pexels-photo-208736.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80') center/cover no-repeat;
       isolation:isolate;
     }
     .hero::after{
-      content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,6,23,.55),rgba(2,6,23,.55));
+      content:"";position:absolute;inset:0;
+      background:
+       linear-gradient(180deg,rgba(14,103,178,.75),rgba(14,103,178,.55)),
+       radial-gradient(1200px 600px at 80% -10%, rgba(212,175,55,.25), transparent 60%);
       z-index:-1;
     }
     .hero .content{padding:48px;text-align:center}
-    .hero h1{font-size:clamp(28px,6vw,56px);margin:0 0 12px}
-    .hero p{margin:0 0 20px;color:#e2e8f0;font-size:clamp(16px,2.5vw,19px)}
+    .pill{
+      display:inline-block;padding:6px 12px;border-radius:999px;
+      background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);
+      color:#eef6ff;font-weight:700;letter-spacing:.02em
+    }
+    .hero h1{font-size:clamp(28px,6vw,56px);margin:12px 0 8px}
+    .hero p{margin:0 0 20px;color:#e6f1ff;font-size:clamp(16px,2.5vw,19px)}
     .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .pill{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.25);color:#e2e8f0;font-weight:600}
 
-    section{padding:56px 0}
+    section{padding:64px 0}
     h2{font-size:clamp(22px,3.8vw,32px);margin:0 0 18px}
     .grid{display:grid;gap:22px}
     @media(min-width:720px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-    .card{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid #e5e7eb}
+    .card{
+      background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);
+      overflow:hidden;border:1px solid var(--line)
+    }
     .card img{display:block;width:100%;height:220px;object-fit:cover}
     .card .body{padding:16px}
     .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:6px}
-    .price{font-weight:800}
+    .price{font-weight:900;color:var(--gold)}
+
     .services{display:grid;gap:16px}
     @media(min-width:720px){.services{grid-template-columns:repeat(4,1fr)}}
-    .service{background:var(--paper);border:1px solid #e5e7eb;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .service{
+      background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+      padding:18px;box-shadow:var(--shadow)
+    }
     .service b{color:var(--ink)}
+
     .about{display:grid;gap:24px;align-items:center}
     @media(min-width:900px){.about{grid-template-columns:1.1fr .9fr}}
     .about img{border-radius:var(--radius);width:100%;height:100%;object-fit:cover;box-shadow:var(--shadow)}
-    .contact{background:#0b1220;color:#e2e8f0}
-    .contact a{color:#bbf7d0}
-    footer{padding:32px 0;color:#94a3b8}
+
+    .contact{background:var(--ocean);color:#eaf5ff}
+    .contact a{color:#fff;border-bottom:1px solid rgba(255,255,255,.4)}
+    .contact .wrap{padding-block:56px}
+    .tag{display:inline-block;background:rgba(212,175,55,.15);color:#fff;border:1px solid rgba(212,175,55,.5);padding:6px 10px;border-radius:999px;font-weight:700}
+
+    footer{padding:32px 0;color:#94a3b8;background:#0a3257}
     .small{font-size:13px;color:#64748b}
   </style>
 
@@ -86,6 +137,7 @@
     "telephone": "+1-786-773-8064",
     "email": "info@mariagabrielahernandez.com",
     "url": "https://mariagabrielahernandez.com",
+    "knowsAbout": ["Commercial real estate", "Industrial parks", "Warehouses", "Residential real estate", "Investments"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Miami",
@@ -111,15 +163,15 @@
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" aria-label="Miami skyline">
   <div class="content">
-    <div class="pill">Miami • Buy • Sell • Rent • Invest</div>
-    <h1>Your Miami home, made simple.</h1>
-    <p>I help buyers, sellers, renters, and investors — locally and internationally — find exceptional properties across Miami.</p>
+    <div class="pill">Miami • Commercial & Residential • Buy • Sell • Rent • Invest</div>
+    <h1>Real estate, done with clarity and trust.</h1>
+    <p>I help businesses and families secure the right properties — from industrial parks and warehouses to oceanfront homes — in Miami and across global markets.</p>
     <div class="cta">
-      <a class="btn" href="https://wa.me/17867738064?text=Hi%20Maria%2C%20I%27d%20love%20to%20chat%20about%20Miami%20real%20estate.">WhatsApp me</a>
+      <a class="btn" href="https://wa.me/17867738064?text=Hi%20Maria%2C%20I%27d%20love%20to%20chat%20about%20commercial%20or%20residential%20options.">WhatsApp me</a>
       <a class="btn outline" href="tel:+17867738064">Call +1 (786) 773-8064</a>
-      <a class="btn outline" href="mailto:info@mariagabrielahernandez.com">Email</a>
+      <a class="btn gold" href="mailto:info@mariagabrielahernandez.com">Email</a>
     </div>
   </div>
 </section>
@@ -129,24 +181,24 @@
     <h2>Featured Listings</h2>
     <div class="grid cols-3">
       <article class="card">
-        <img src="https://images.pexels.com/photos/26732551/pexels-photo-26732551.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Minimalist living room with soft natural light">
+        <img src="https://images.pexels.com/photos/3739126/pexels-photo-3739126.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Class-A warehouse exterior">
         <div class="body">
-          <div class="eyebrow">Miami • 2 Bed • 2 Bath • 1,280 sqft</div>
-          <div class="price">$895,000 — Brickell</div>
+          <div class="eyebrow">Doral • Industrial • 15,000 sq ft</div>
+          <div class="price">$5,900,000 — Warehouse</div>
         </div>
       </article>
       <article class="card">
-        <img src="https://images.pexels.com/photos/19227214/pexels-photo-19227214.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Spacious modern kitchen with island and stainless appliances">
+        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Modern Miami high-rise">
+        <div class="body">
+          <div class="eyebrow">Brickell • 2 Bed • 2 Bath • 1,280 sqft</div>
+          <div class="price">$895,000 — Condo</div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.pexels.com/photos/261146/pexels-photo-261146.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Oceanfront residence">
         <div class="body">
           <div class="eyebrow">Miami Beach • 3 Bed • 3 Bath • 2,050 sqft</div>
           <div class="price">$2,450,000 — Oceanfront</div>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://images.pexels.com/photos/28962827/pexels-photo-28962827.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Art Deco district at sunset with palm-lined streets">
-        <div class="body">
-          <div class="eyebrow">South Beach • 1 Bed • 1 Bath • 780 sqft</div>
-          <div class="price">$549,000 — Art Deco</div>
         </div>
       </article>
     </div>
@@ -158,10 +210,10 @@
   <div class="wrap">
     <h2>How I Help</h2>
     <div class="services">
-      <div class="service"><b>Buy</b><br><span class="small">On-market & off-market searches, tours, offer strategy, negotiation.</span></div>
-      <div class="service"><b>Sell</b><br><span class="small">Pricing, staging, photography, global marketing, vetted buyers.</span></div>
-      <div class="service"><b>Rent</b><br><span class="small">Long-term & seasonal rentals, applications, paperwork, move-in.</span></div>
-      <div class="service"><b>Invest</b><br><span class="small">Cap rates, STR rules, property management intros, cross-border.</span></div>
+      <div class="service"><b>Commercial</b><br><span class="small">Industrial parks, warehouses, site selection, leases & acquisitions.</span></div>
+      <div class="service"><b>Residential</b><br><span class="small">Condos, single-family, luxury oceanfront, relocations.</span></div>
+      <div class="service"><b>Sell</b><br><span class="small">Pricing, staging, photography, multi-channel marketing.</span></div>
+      <div class="service"><b>Invest</b><br><span class="small">Underwriting, cap rates, short-term rental rules, property management intros.</span></div>
     </div>
   </div>
 </section>
@@ -169,20 +221,21 @@
 <section id="about" class="about wrap">
   <div>
     <h2>Meet Maria</h2>
-    <p>I'm <b>Maria Gabriela Hernandez</b>, a future Miami-based real estate agent serving clients across the U.S. and abroad. Whether it’s your first condo, a luxury oceanfront home, or an income-producing property, I guide you end-to-end with clarity and care.</p>
+    <p><b>Maria Gabriela Hernandez</b> is a Miami-based real estate professional with deep experience in both <b>commercial</b> and <b>residential</b> properties. She served as a <b>General Manager of Sales & Business</b> for a developer and construction company, leading projects and negotiations across markets.</p>
+    <p>Maria is a natural businesswoman and a trusted partner for serious transactions — including <b>industrial parks</b>, <b>warehouses</b>, and income-producing assets — as well as premium housing for families and executives. She supports local and international clients with clear strategy and reliable execution.</p>
     <p class="small">Languages: English • Español</p>
     <div class="cta">
       <a class="btn" href="https://wa.me/17867738064?text=Hi%20Maria%2C%20I%27d%20like%20to%20schedule%20a%20consultation.">Schedule a WhatsApp chat</a>
-      <a class="btn outline" href="mailto:info@mariagabrielahernandez.com">Request a CMA</a>
+      <a class="btn outline" href="mailto:info@mariagabrielahernandez.com">Request details</a>
     </div>
   </div>
-  <img src="https://images.pexels.com/photos/19829938/pexels-photo-19829938.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Aerial view of Miami home with pool and palms">
+  <img src="https://images.pexels.com/photos/2058272/pexels-photo-2058272.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Aerial view of Miami business district and waterfront">
 </section>
 
 <section id="contact" class="contact">
   <div class="wrap">
     <h2>Contact</h2>
-    <p>Miami, Florida • Serving local and international clients</p>
+    <p><span class="tag">Miami, Florida — Serving local & international clients</span></p>
     <p><b>Phone:</b> <a href="tel:+17867738064">+1 (786) 773-8064</a><br>
        <b>Email:</b> <a href="mailto:info@mariagabrielahernandez.com">info@mariagabrielahernandez.com</a><br>
        <b>WhatsApp:</b> <a href="https://wa.me/17867738064?text=Hi%20Maria%2C%20I%27m%20interested%20in%20Miami%20real%20estate.">Message me</a></p>
@@ -198,12 +251,9 @@
 <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 
 <!--
-Image credits (Pexels, free for commercial use; attribution appreciated):
-Hero: "Aerial View of Miami Beach..." by emma
-Listing 1: "Interior of a Modern Living Room" by Pușcaș Adryan
-Listing 2: "Kitchen in a Luxury House" by Curtis Adams
-Listing 3: "Scenic Miami Beach Art Deco District at Sunset" by Vincent Rivaud
-About image: "Roofs of Houses with Pools" by Alexander Wark Feeney
+Image credits (Pexels, free for commercial use; attribution appreciated).
+Hero: Miami skyline by Pixabay. Listings: Warehouse by Tom Fisk; High-rise by Pixabay; Oceanfront by Pixabay.
+About image: Miami waterfront by Lance Asper.
 -->
 </body>
 </html>
