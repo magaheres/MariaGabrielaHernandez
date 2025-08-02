@@ -76,6 +76,27 @@
     a:hover{color:var(--ocean-dark);text-decoration:underline}
 
     .wrap{max-width:var(--max);margin-inline:auto;padding:var(--space-md)}
+    
+    /* Contenedor para contenido principal */
+    .container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 var(--space-sm);
+      overflow-x: hidden;
+    }
+    
+    @media(min-width: 480px) {
+      .container {
+        padding: 0 var(--space-md);
+      }
+    }
+    
+    @media(min-width: 768px) {
+      .container {
+        padding: 0 var(--space-lg);
+      }
+    }
 
     /* Encabezado Mejorado con Navegación Móvil */
     header{
@@ -262,6 +283,40 @@
     @media(min-width:900px){.about{grid-template-columns:1.1fr .9fr}}
     @media(max-width:899px){.about{grid-template-columns:1fr}}
     
+    /* Asegurar que no hay scroll horizontal a 360px */
+    @media(max-width: 480px) {
+      .wrap {
+        padding: var(--space-sm);
+      }
+      
+      .hero .content {
+        padding: var(--space-lg) var(--space-sm);
+      }
+      
+      .cta {
+        gap: var(--space-sm);
+      }
+      
+      .cta .btn {
+        width: 100%;
+        max-width: none;
+        font-size: var(--text-sm);
+        padding: var(--space-sm);
+      }
+      
+      .card .body {
+        padding: var(--space-sm);
+      }
+      
+      .service {
+        padding: var(--space-sm);
+      }
+      
+      .about {
+        gap: var(--space-md);
+      }
+    }
+    
     .about img{
       border-radius:var(--radius);width:100%;height:100%;object-fit:cover;
       box-shadow:var(--shadow);transition: transform 0.3s ease;
@@ -392,84 +447,86 @@
   </div>
 </header>
 
-<section class="hero" aria-label="Panorama de Miami">
-  <div class="content">
-    <div class="pill">Miami • Comercial y Residencial • Comprar • Vender • Rentar • Invertir</div>
-    <h1>Bienes raíces con claridad y confianza.</h1>
-    <p>Ayudo a empresas y familias a asegurar las propiedades correctas — desde parques industriales y almacenes hasta casas frente al mar — en Miami y en mercados globales.</p>
-    <div class="cta">
-      <a class="btn" href="https://wa.me/17867738064?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20conversar%20sobre%20opciones%20comerciales%20o%20residenciales.">WhatsApp</a>
-      <a class="btn gold" href="tel:+17867738064">Llámame</a>
-      <a class="btn white" href="mailto:info@mariagabrielahernandez.com">Escríbeme</a>
+<main class="container">
+  <section class="hero" aria-label="Panorama de Miami">
+    <div class="content">
+      <div class="pill">Miami • Comercial y Residencial • Comprar • Vender • Rentar • Invertir</div>
+      <h1>Bienes raíces con claridad y confianza.</h1>
+      <p>Ayudo a empresas y familias a asegurar las propiedades correctas — desde parques industriales y almacenes hasta casas frente al mar — en Miami y en mercados globales.</p>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/17867738064?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20conversar%20sobre%20opciones%20comerciales%20o%20residenciales.">WhatsApp</a>
+        <a class="btn gold" href="tel:+17867738064">Llámame</a>
+        <a class="btn white" href="mailto:info@mariagabrielahernandez.com">Escríbeme</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="listings">
-  <div class="wrap">
-    <h2>Propiedades destacadas</h2>
-    <div class="grid cols-3">
-      <article class="card">
-        <img src="https://images.pexels.com/photos/4277794/pexels-photo-4277794.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Interior de almacén clase A con estanterías altas">
-        <div class="body">
-          <div class="eyebrow">Doral • Industrial • 15,000 pies²</div>
-          <div class="price">$5,900,000 — Almacén</div>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://images.pexels.com/photos/32812553/pexels-photo-32812553.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Exterior de condominio en torre moderna">
-        <div class="body">
-          <div class="eyebrow">Brickell • 2 hab • 2 baños • 1,280 pies²</div>
-          <div class="price">$895,000 — Condominio</div>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://images.pexels.com/photos/3897529/pexels-photo-3897529.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Vista frente al mar con océano turquesa desde una cabaña">
-        <div class="body">
-          <div class="eyebrow">Miami Beach • 3 hab • 3 baños • 2,050 pies²</div>
-          <div class="price">$2,450,000 — Frente al mar</div>
-        </div>
-      </article>
+  <section id="listings">
+    <div class="wrap">
+      <h2>Propiedades destacadas</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <img src="https://images.pexels.com/photos/4277794/pexels-photo-4277794.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Interior de almacén clase A con estanterías altas">
+          <div class="body">
+            <div class="eyebrow">Doral • Industrial • 15,000 pies²</div>
+            <div class="price">$5,900,000 — Almacén</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.pexels.com/photos/32812553/pexels-photo-32812553.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Exterior de condominio en torre moderna">
+          <div class="body">
+            <div class="eyebrow">Brickell • 2 hab • 2 baños • 1,280 pies²</div>
+            <div class="price">$895,000 — Condominio</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.pexels.com/photos/3897529/pexels-photo-3897529.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Vista frente al mar con océano turquesa desde una cabaña">
+          <div class="body">
+            <div class="eyebrow">Miami Beach • 3 hab • 3 baños • 2,050 pies²</div>
+            <div class="price">$2,450,000 — Frente al mar</div>
+          </div>
+        </article>
+      </div>
+      <p class="small" style="margin-top:10px;">*Propiedades y precios de ejemplo para diseño — reemplaza con tu inventario.</p>
     </div>
-    <p class="small" style="margin-top:10px;">*Propiedades y precios de ejemplo para diseño — reemplaza con tu inventario.</p>
-  </div>
-</section>
+  </section>
 
-<section id="services">
-  <div class="wrap">
-    <h2>Cómo te ayudo</h2>
-    <div class="services">
-      <div class="service"><b>Comercial</b><br><span class="small">Parques industriales, almacenes, selección de sitio, arrendamientos y adquisiciones.</span></div>
-      <div class="service"><b>Residencial</b><br><span class="small">Condominios, casas unifamiliares, lujo frente al mar, reubicaciones.</span></div>
-      <div class="service"><b>Venta</b><br><span class="small">Precio, preparación de la propiedad, fotografía y marketing multicanal.</span></div>
-      <div class="service"><b>Inversión</b><br><span class="small">Análisis, cap rates, reglas de alquiler a corto plazo y contactos de administración.</span></div>
+  <section id="services">
+    <div class="wrap">
+      <h2>Cómo te ayudo</h2>
+      <div class="services">
+        <div class="service"><b>Comercial</b><br><span class="small">Parques industriales, almacenes, selección de sitio, arrendamientos y adquisiciones.</span></div>
+        <div class="service"><b>Residencial</b><br><span class="small">Condominios, casas unifamiliares, lujo frente al mar, reubicaciones.</span></div>
+        <div class="service"><b>Venta</b><br><span class="small">Precio, preparación de la propiedad, fotografía y marketing multicanal.</span></div>
+        <div class="service"><b>Inversión</b><br><span class="small">Análisis, cap rates, reglas de alquiler a corto plazo y contactos de administración.</span></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="about" class="about wrap">
-  <div>
-    <h2>Conoce a María Gabriela</h2>
-    <p><b>María Gabriela Hernandez</b> es una profesional inmobiliaria en Miami con amplia experiencia en <b>propiedades comerciales</b> y <b>residenciales</b>. Se desempeñó como <b>Gerente General de Ventas y Negocios</b> en una desarrolladora y constructora, liderando proyectos y negociaciones en distintos mercados.</p>
-    <p>María es una negociadora nata y una aliada de confianza para operaciones de alto valor — incluyendo <b>parques industriales</b>, <b>almacenes</b> y activos generadores de renta — así como vivienda premium para familias y ejecutivos. Acompaña a clientes locales e internacionales con estrategia clara y ejecución confiable.</p>
-    <p class="small">Idiomas: Inglés • Español</p>
-    <div class="cta">
-      <a class="btn gold" href="https://wa.me/17867738064?text=Hola%20Maria%2C%20quiero%20agendar%20una%20consulta.">Agenda por WhatsApp</a>
-      <a class="btn white" href="mailto:info@mariagabrielahernandez.com">Solicitar información</a>
+  <section id="about" class="about wrap">
+    <div>
+      <h2>Conoce a María Gabriela</h2>
+      <p><b>María Gabriela Hernandez</b> es una profesional inmobiliaria en Miami con amplia experiencia en <b>propiedades comerciales</b> y <b>residenciales</b>. Se desempeñó como <b>Gerente General de Ventas y Negocios</b> en una desarrolladora y constructora, liderando proyectos y negociaciones en distintos mercados.</p>
+      <p>María es una negociadora nata y una aliada de confianza para operaciones de alto valor — incluyendo <b>parques industriales</b>, <b>almacenes</b> y activos generadores de renta — así como vivienda premium para familias y ejecutivos. Acompaña a clientes locales e internacionales con estrategia clara y ejecución confiable.</p>
+      <p class="small">Idiomas: Inglés • Español</p>
+      <div class="cta">
+        <a class="btn gold" href="https://wa.me/17867738064?text=Hola%20Maria%2C%20quiero%20agendar%20una%20consulta.">Agenda por WhatsApp</a>
+        <a class="btn white" href="mailto:info@mariagabrielahernandez.com">Solicitar información</a>
+      </div>
     </div>
-  </div>
-  <img src="https://images.pexels.com/photos/13025284/pexels-photo-13025284.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Complejo empresarial moderno de vidrio con pasarela elevada">
-</section>
+    <img src="https://images.pexels.com/photos/13025284/pexels-photo-13025284.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Complejo empresarial moderno de vidrio con pasarela elevada">
+  </section>
 
-<section id="contact" class="contact">
-  <div class="wrap">
-    <h2>Contacto</h2>
-    <p><span class="tag">Miami, Florida — Atención a clientes locales e internacionales</span></p>
-    <p><b>Teléfono:</b> <a href="tel:+17867738064">+1 (786) 773-8064</a><br>
-       <b>Correo:</b> <a href="mailto:info@mariagabrielahernandez.com">info@mariagabrielahernandez.com</a><br>
-       <b>WhatsApp:</b> <a href="https://wa.me/17867738064?text=Hola%20Maria%2C%20estoy%20interesado%2Fa%20en%20bienes%20raíces%20en%20Miami.">Escríbeme</a></p>
-  </div>
-</section>
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contacto</h2>
+      <p><span class="tag">Miami, Florida — Atención a clientes locales e internacionales</span></p>
+      <p><b>Teléfono:</b> <a href="tel:+17867738064">+1 (786) 773-8064</a><br>
+         <b>Correo:</b> <a href="mailto:info@mariagabrielahernandez.com">info@mariagabrielahernandez.com</a><br>
+         <b>WhatsApp:</b> <a href="https://wa.me/17867738064?text=Hola%20Maria%2C%20estoy%20interesado%2Fa%20en%20bienes%20raíces%20en%20Miami.">Escríbeme</a></p>
+    </div>
+  </section>
+</main>
 
 <footer>
   <div class="wrap">

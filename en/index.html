@@ -76,6 +76,27 @@
     a:hover{color:var(--ocean-dark);text-decoration:underline}
 
     .wrap{max-width:var(--max);margin-inline:auto;padding:var(--space-md)}
+    
+    /* Container for main content */
+    .container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 var(--space-sm);
+      overflow-x: hidden;
+    }
+    
+    @media(min-width: 480px) {
+      .container {
+        padding: 0 var(--space-md);
+      }
+    }
+    
+    @media(min-width: 768px) {
+      .container {
+        padding: 0 var(--space-lg);
+      }
+    }
 
     /* Enhanced Header with Mobile Navigation */
     header{
@@ -262,6 +283,40 @@
     @media(min-width:900px){.about{grid-template-columns:1.1fr .9fr}}
     @media(max-width:899px){.about{grid-template-columns:1fr}}
     
+    /* Ensure no horizontal scroll at 360px */
+    @media(max-width: 480px) {
+      .wrap {
+        padding: var(--space-sm);
+      }
+      
+      .hero .content {
+        padding: var(--space-lg) var(--space-sm);
+      }
+      
+      .cta {
+        gap: var(--space-sm);
+      }
+      
+      .cta .btn {
+        width: 100%;
+        max-width: none;
+        font-size: var(--text-sm);
+        padding: var(--space-sm);
+      }
+      
+      .card .body {
+        padding: var(--space-sm);
+      }
+      
+      .service {
+        padding: var(--space-sm);
+      }
+      
+      .about {
+        gap: var(--space-md);
+      }
+    }
+    
     .about img{
       border-radius:var(--radius);width:100%;height:100%;object-fit:cover;
       box-shadow:var(--shadow);transition: transform 0.3s ease;
@@ -392,84 +447,86 @@
   </div>
 </header>
 
-<section class="hero" aria-label="Miami skyline">
-  <div class="content">
-    <div class="pill">Miami • Commercial & Residential • Buy • Sell • Rent • Invest</div>
-    <h1>Real estate, done with clarity and trust.</h1>
-    <p>I help businesses and families secure the right properties — from industrial parks and warehouses to oceanfront homes — in Miami and across global markets.</p>
-    <div class="cta">
-      <a class="btn" href="https://wa.me/17867738064?text=Hi%20Maria%2C%20I%27d%20love%20to%20chat%20about%20commercial%20or%20residential%20options.">WhatsApp Me</a>
-      <a class="btn gold" href="tel:+17867738064">Call Me</a>
-      <a class="btn white" href="mailto:info@mariagabrielahernandez.com">Email Me</a>
+<main class="container">
+  <section class="hero" aria-label="Miami skyline">
+    <div class="content">
+      <div class="pill">Miami • Commercial & Residential • Buy • Sell • Rent • Invest</div>
+      <h1>Real estate, done with clarity and trust.</h1>
+      <p>I help businesses and families secure the right properties — from industrial parks and warehouses to oceanfront homes — in Miami and across global markets.</p>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/17867738064?text=Hi%20Maria%2C%20I%27d%20love%20to%20chat%20about%20commercial%20or%20residential%20options.">WhatsApp Me</a>
+        <a class="btn gold" href="tel:+17867738064">Call Me</a>
+        <a class="btn white" href="mailto:info@mariagabrielahernandez.com">Email Me</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="listings">
-  <div class="wrap">
-    <h2>Featured Listings</h2>
-    <div class="grid cols-3">
-      <article class="card">
-        <img src="https://images.pexels.com/photos/4277794/pexels-photo-4277794.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Class-A warehouse interior with tall racks">
-        <div class="body">
-          <div class="eyebrow">Doral • Industrial • 15,000 sq ft</div>
-          <div class="price">$5,900,000 — Warehouse</div>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://images.pexels.com/photos/32812553/pexels-photo-32812553.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Modern high-rise condominium exterior">
-        <div class="body">
-          <div class="eyebrow">Brickell • 2 Bed • 2 Bath • 1,280 sq ft</div>
-          <div class="price">$895,000 — Condo</div>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://images.pexels.com/photos/3897529/pexels-photo-3897529.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Beachfront view with turquoise ocean from cabana">
-        <div class="body">
-          <div class="eyebrow">Miami Beach • 3 Bed • 3 Bath • 2,050 sq ft</div>
-          <div class="price">$2,450,000 — Oceanfront</div>
-        </div>
-      </article>
+  <section id="listings">
+    <div class="wrap">
+      <h2>Featured Listings</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <img src="https://images.pexels.com/photos/4277794/pexels-photo-4277794.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Class-A warehouse interior with tall racks">
+          <div class="body">
+            <div class="eyebrow">Doral • Industrial • 15,000 sq ft</div>
+            <div class="price">$5,900,000 — Warehouse</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.pexels.com/photos/32812553/pexels-photo-32812553.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Modern high-rise condominium exterior">
+          <div class="body">
+            <div class="eyebrow">Brickell • 2 Bed • 2 Bath • 1,280 sq ft</div>
+            <div class="price">$895,000 — Condo</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.pexels.com/photos/3897529/pexels-photo-3897529.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Beachfront view with turquoise ocean from cabana">
+          <div class="body">
+            <div class="eyebrow">Miami Beach • 3 Bed • 3 Bath • 2,050 sq ft</div>
+            <div class="price">$2,450,000 — Oceanfront</div>
+          </div>
+        </article>
+      </div>
+      <p class="small" style="margin-top:10px;">*Sample listings and prices for layout only — replace with your inventory.</p>
     </div>
-    <p class="small" style="margin-top:10px;">*Sample listings and prices for layout only — replace with your inventory.</p>
-  </div>
-</section>
+  </section>
 
-<section id="services">
-  <div class="wrap">
-    <h2>How I Help</h2>
-    <div class="services">
-      <div class="service"><b>Commercial</b><br><span class="small">Industrial parks, warehouses, site selection, leases & acquisitions.</span></div>
-      <div class="service"><b>Residential</b><br><span class="small">Condos, single-family, luxury oceanfront, relocations.</span></div>
-      <div class="service"><b>Sell</b><br><span class="small">Pricing, staging, photography, multi-channel marketing.</span></div>
-      <div class="service"><b>Invest</b><br><span class="small">Underwriting, cap rates, short-term rental rules, property management intros.</span></div>
+  <section id="services">
+    <div class="wrap">
+      <h2>How I Help</h2>
+      <div class="services">
+        <div class="service"><b>Commercial</b><br><span class="small">Industrial parks, warehouses, site selection, leases & acquisitions.</span></div>
+        <div class="service"><b>Residential</b><br><span class="small">Condos, single-family, luxury oceanfront, relocations.</span></div>
+        <div class="service"><b>Sell</b><br><span class="small">Pricing, staging, photography, multi-channel marketing.</span></div>
+        <div class="service"><b>Invest</b><br><span class="small">Underwriting, cap rates, short-term rental rules, property management intros.</span></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="about" class="about wrap">
-  <div>
-    <h2>Meet Maria</h2>
-    <p><b>Maria Gabriela Hernandez</b> is a Miami-based real estate professional with deep experience in both <b>commercial</b> and <b>residential</b> properties. She served as a <b>General Manager of Sales & Business</b> for a developer and construction company, leading projects and negotiations across markets.</p>
-    <p>Maria is a natural businesswoman and a trusted partner for serious transactions — including <b>industrial parks</b>, <b>warehouses</b>, and income-producing assets — as well as premium housing for families and executives. She supports local and international clients with clear strategy and reliable execution.</p>
-    <p class="small">Languages: English • Español</p>
-    <div class="cta">
-      <a class="btn gold" href="https://wa.me/17867738064?text=Hi%20Maria%2C%20I%27d%20like%20to%20schedule%20a%20consultation.">Schedule on WhatsApp</a>
-      <a class="btn white" href="mailto:info@mariagabrielahernandez.com">Request Details</a>
+  <section id="about" class="about wrap">
+    <div>
+      <h2>Meet Maria</h2>
+      <p><b>Maria Gabriela Hernandez</b> is a Miami-based real estate professional with deep experience in both <b>commercial</b> and <b>residential</b> properties. She served as a <b>General Manager of Sales & Business</b> for a developer and construction company, leading projects and negotiations across markets.</p>
+      <p>Maria is a natural businesswoman and a trusted partner for serious transactions — including <b>industrial parks</b>, <b>warehouses</b>, and income-producing assets — as well as premium housing for families and executives. She supports local and international clients with clear strategy and reliable execution.</p>
+      <p class="small">Languages: English • Español</p>
+      <div class="cta">
+        <a class="btn gold" href="https://wa.me/17867738064?text=Hi%20Maria%2C%20I%27d%20like%20to%20schedule%20a%20consultation.">Schedule on WhatsApp</a>
+        <a class="btn white" href="mailto:info@mariagabrielahernandez.com">Request Details</a>
+      </div>
     </div>
-  </div>
-  <img src="https://images.pexels.com/photos/13025284/pexels-photo-13025284.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Modern glass business complex with sky bridge">
-</section>
+    <img src="https://images.pexels.com/photos/13025284/pexels-photo-13025284.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Modern glass business complex with sky bridge">
+  </section>
 
-<section id="contact" class="contact">
-  <div class="wrap">
-    <h2>Contact</h2>
-    <p><span class="tag">Miami, Florida — Serving local & international clients</span></p>
-    <p><b>Phone:</b> <a href="tel:+17867738064">+1 (786) 773-8064</a><br>
-       <b>Email:</b> <a href="mailto:info@mariagabrielahernandez.com">info@mariagabrielahernandez.com</a><br>
-       <b>WhatsApp:</b> <a href="https://wa.me/17867738064?text=Hi%20Maria%2C%20I%27m%20interested%20in%20Miami%20real%20estate.">Message me</a></p>
-  </div>
-</section>
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p><span class="tag">Miami, Florida — Serving local & international clients</span></p>
+      <p><b>Phone:</b> <a href="tel:+17867738064">+1 (786) 773-8064</a><br>
+         <b>Email:</b> <a href="mailto:info@mariagabrielahernandez.com">info@mariagabrielahernandez.com</a><br>
+         <b>WhatsApp:</b> <a href="https://wa.me/17867738064?text=Hi%20Maria%2C%20I%27m%20interested%20in%20Miami%20real%20estate.">Message me</a></p>
+    </div>
+  </section>
+</main>
 
 <footer>
   <div class="wrap">
