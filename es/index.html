@@ -4,32 +4,32 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Maria Gabriela Hernandez — Bienes Raíces en Miami</title>
-  <meta name="description" content="Bienes raíces comerciales y residenciales en Miami y más allá. Maria Gabriela Hernandez ayuda a comprar, vender, rentar e invertir — a nivel local e internacional." />
+  <meta name="description" content="Bienes raíces comerciales y residenciales en Miami y más allá. Maria Gabriela Hernandez ayuda a comprar, vender, alquilar e invertir — a nivel local e internacional." />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Maria Gabriela Hernandez — Bienes Raíces en Miami">
-  <meta property="og:description" content="Comercial • Industrial • Residencial — Miami e internacional.">
+  <meta property="og:description" content="Comercial • Industrial • Residencial — Miami e Internacional.">
   <meta property="og:image" content="https://images.pexels.com/photos/569093/pexels-photo-569093.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
   <style>
     :root{
-      /* Paleta de Colores Mejorada */
-      --ocean:#0e67b2;  /* azul océano */
+      /* Enhanced Color Palette */
+      --ocean:#0e67b2;  /* ocean blue */
       --ocean-dark:#0a4a7a;
       --ocean-light:#1e8ae8;
-      --gold:#d4af37;  /* dorado */
+      --gold:#d4af37;   /* gold */
       --gold-dark:#b89627;
       --gold-light:#e6c866;
-      --paper:#ffffff; /* blanco */
+      --paper:#ffffff;  /* white */
 
-      /* Neutros */
+      /* Neutrals */
       --ink:#0b1220;
       --muted:#64748b;
       --line:#e5e7eb;
 
-      /* Escala de Espaciado Mejorada */
+      /* Enhanced Spacing Scale */
       --space-xs: 0.5rem;
       --space-sm: 1rem;
       --space-md: 1.5rem;
@@ -37,7 +37,7 @@
       --space-xl: 3rem;
       --space-2xl: 4rem;
 
-      /* Escala de Tipografía */
+      /* Typography Scale */
       --text-xs: 0.75rem;
       --text-sm: 0.875rem;
       --text-base: 1rem;
@@ -47,7 +47,7 @@
       --text-3xl: 1.875rem;
       --text-4xl: 2.25rem;
 
-      /* UI Mejorado */
+      /* Enhanced UI */
       --radius-sm: 8px;
       --radius: 16px;
       --radius-lg: 24px;
@@ -56,7 +56,7 @@
       --shadow-lg: 0 20px 40px rgba(2,8,23,.15);
       --max: 1200px;
 
-      /* Puntos de Quiebre */
+      /* Breakpoints */
       --mobile: 480px;
       --tablet: 768px;
       --desktop: 1024px;
@@ -77,13 +77,26 @@
 
     .wrap{max-width:var(--max);margin-inline:auto;padding:var(--space-md)}
     
-    /* Contenedor para contenido principal */
+    /* Container for main content */
     .container {
       width: 100%;
       max-width: 100%;
       margin: 0 auto;
-      padding: 0 var(--space-sm);
+      padding: 0;
       overflow-x: hidden;
+    }
+    
+    /* Ensure hero section takes full width */
+    .hero {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      max-width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
     }
     
     @media(min-width: 480px) {
@@ -98,7 +111,7 @@
       }
     }
 
-    /* Encabezado Mejorado con Navegación Móvil */
+    /* Enhanced Header with Mobile Navigation */
     header{
       position:sticky;top:0;z-index:20;
       background:rgba(255,255,255,.95);
@@ -134,7 +147,7 @@
       text-decoration: none;
     }
 
-    /* Navegación Móvil */
+    /* Mobile Navigation */
     .mobile-menu-toggle {
       display: none;
       flex-direction: column;
@@ -143,6 +156,8 @@
       padding: var(--space-xs);
       border-radius: var(--radius-sm);
       transition: all 0.2s ease;
+      z-index: 30;
+      position: relative;
     }
     
     .mobile-menu-toggle span {
@@ -150,6 +165,7 @@
       height: 2px;
       background: var(--ink);
       transition: all 0.3s ease;
+      display: block;
     }
     
     .mobile-menu-toggle.active span:nth-child(1) {
@@ -164,7 +180,7 @@
       transform: rotate(-45deg) translate(6px, -6px);
     }
 
-    /* Botones Mejorados */
+    /* Enhanced Buttons */
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       padding:var(--space-sm) var(--space-md);border-radius:999px;border:2px solid transparent;
@@ -186,11 +202,16 @@
     .btn.white:hover{background:var(--ocean);color:#fff}
     .cta{display:flex;gap:var(--space-sm);flex-wrap:wrap;justify-content:center}
 
-    /* Sección Hero Mejorada */
+    /* Enhanced Hero Section */
     .hero{
       position:relative;min-height:80vh;display:grid;place-items:center;color:white;
       background:url('https://images.pexels.com/photos/569093/pexels-photo-569093.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80') center/cover no-repeat;
       isolation:isolate;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
     }
     .hero::after{
       content:"";position:absolute;inset:0;
@@ -202,6 +223,8 @@
     .hero .content{
       padding:var(--space-2xl) var(--space-md);text-align:center;
       max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
     }
     .pill{
       display:inline-block;padding:var(--space-xs) var(--space-sm);border-radius:999px;
@@ -220,7 +243,7 @@
       line-height: 1.6;
     }
 
-    /* Secciones Mejoradas */
+    /* Enhanced Sections */
     section{padding:var(--space-2xl) 0}
     h2{
       font-size:clamp(1.5rem, 3.8vw, 2rem);margin:0 0 var(--space-md);
@@ -228,7 +251,7 @@
       line-height: 1.3;
     }
     
-    /* Sistema de Grid Mejorado */
+    /* Enhanced Grid System */
     .grid{display:grid;gap:var(--space-lg)}
     @media(min-width:var(--tablet)){
       .grid.cols-3{grid-template-columns:repeat(3,1fr)}
@@ -237,7 +260,7 @@
       .grid.cols-3{grid-template-columns:1fr}
     }
 
-    /* Tarjetas Mejoradas */
+    /* Enhanced Cards */
     .card{
       background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);
       overflow:hidden;border:1px solid var(--line);
@@ -261,7 +284,7 @@
     }
     .price{font-weight:900;color:var(--gold);font-size: var(--text-lg)}
 
-    /* Servicios Mejorados */
+    /* Enhanced Services */
     .services{display:grid;gap:var(--space-md)}
     @media(min-width:var(--tablet)){.services{grid-template-columns:repeat(4,1fr)}}
     @media(max-width:767px){.services{grid-template-columns:repeat(2,1fr)}}
@@ -278,19 +301,29 @@
       border-color: var(--ocean-light);
     }
 
-    /* Sección Acerca de Mejorada */
+    /* Enhanced About Section */
     .about{display:grid;gap:var(--space-lg);align-items:center}
     @media(min-width:900px){.about{grid-template-columns:1.1fr .9fr}}
     @media(max-width:899px){.about{grid-template-columns:1fr}}
     
-    /* Asegurar que no hay scroll horizontal a 360px */
+    /* Ensure no horizontal scroll at 360px */
     @media(max-width: 480px) {
       .wrap {
         padding: var(--space-sm);
       }
       
+      .hero {
+        min-height: 70vh;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        max-width: 100vw;
+      }
+      
       .hero .content {
         padding: var(--space-lg) var(--space-sm);
+        margin: 0;
+        width: 100%;
       }
       
       .cta {
@@ -325,7 +358,7 @@
       transform: scale(1.02);
     }
 
-    /* Sección de Contacto Mejorada */
+    /* Enhanced Contact Section */
     .contact{background:var(--ocean);color:#eaf5ff}
     .contact a{color:#fff;border-bottom:1px solid rgba(255,255,255,.4);transition: all 0.2s ease}
     .contact a:hover{border-bottom-color: #fff}
@@ -336,32 +369,63 @@
       border-radius:999px;font-weight:700;font-size: var(--text-sm);
     }
 
-    /* Pie de Página Mejorado */
+    /* Enhanced Footer */
     footer{padding:var(--space-lg) 0;color:#94a3b8;background:#0a3257}
     .small{font-size:var(--text-xs);color:#64748b}
 
-    /* Estilos de Navegación Móvil */
+    /* Mobile Navigation Styles */
     @media(max-width:767px){
       .links{
         position: fixed;
-        top: 100%;
+        top: 0;
         left: 0;
         right: 0;
         background: rgba(255,255,255,0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
-        padding: var(--space-lg);
-        border-top: 1px solid var(--line);
+        padding: var(--space-xl) var(--space-lg);
+        border-bottom: 1px solid var(--line);
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
+        z-index: 25;
+        min-height: 100vh;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: var(--space-md);
       }
       
       .links.active{
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
+      }
+      
+      .links a {
+        width: 100%;
+        padding: var(--space-sm);
+        text-align: left;
+        border-radius: var(--radius-sm);
+        font-weight: 600;
+      }
+      
+      .links .btn {
+        width: 100%;
+        justify-content: center;
+        margin-top: var(--space-sm);
+      }
+      
+      .lang-switch {
+        width: 100%;
+        justify-content: center;
+        margin-top: var(--space-md);
+        margin-left: 0 !important;
+      }
+      
+      .lang-switch .btn {
+        flex: 1;
+        max-width: 80px;
       }
       
       .mobile-menu-toggle{
@@ -383,35 +447,35 @@
       }
     }
 
-    /* Estados de Carga */
+    /* Loading States */
     .loading {
       opacity: 0.7;
       pointer-events: none;
     }
     
-    /* Mejoras de Enfoque */
+    /* Focus Improvements */
     *:focus-visible {
       outline: 2px solid var(--ocean);
       outline-offset: 2px;
     }
     
-    /* Desplazamiento Suave */
+    /* Smooth Scrolling */
     html {
       scroll-behavior: smooth;
     }
   </style>
 
-  <!-- Datos estructurados (SEO) -->
+  <!-- Structured data (SEO) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     "name": "Maria Gabriela Hernandez",
-    "areaServed": ["Miami, Florida", "United States", "International"],
+    "areaServed": ["Miami, Florida", "Estados Unidos", "Internacional"],
     "telephone": "+1-786-773-8064",
     "email": "info@mariagabrielahernandez.com",
     "url": "https://mariagabrielahernandez.com",
-    "knowsAbout": ["Commercial real estate", "Industrial parks", "Warehouses", "Residential real estate", "Investments"],
+    "knowsAbout": ["Bienes raíces comerciales", "Parques industriales", "Almacenes (warehouses)", "Bienes raíces residenciales", "Inversiones"],
     "address": { "@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL", "addressCountry": "US" }
   }
   </script>
@@ -423,8 +487,8 @@
     <nav>
       <div class="logo">Maria Gabriela <span>Hernandez</span></div>
       
-      <!-- Toggle de Menú Móvil -->
-      <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Alternar menú de navegación">
+      <!-- Mobile Menu Toggle -->
+      <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir o cerrar el menú de navegación">
         <span></span>
         <span></span>
         <span></span>
@@ -433,30 +497,30 @@
       <div class="links" id="navLinks">
         <a href="#listings">Propiedades</a>
         <a href="#services">Servicios</a>
-        <a href="#about">Sobre mí</a>
+        <a href="#about">Acerca</a>
         <a href="#contact" class="btn">Contacto</a>
 
-        <!-- Conmutador de idioma (ES activo) -->
+        <!-- Language switcher (ES active) -->
         <div class="lang-switch" style="display:flex; gap:10px; margin-left:12px;">
           <a class="btn white" href="/en/" lang="en" aria-label="English">EN</a>
-          <a class="btn gold"  href="/es/" lang="es" aria-label="Español">ES</a>
+          <a class="btn gold" href="/es/" lang="es" aria-label="Español">ES</a>
         </div>
-        <!-- /Conmutador de idioma -->
+        <!-- /Language switcher -->
       </div>
     </nav>
   </div>
 </header>
 
 <main class="container">
-  <section class="hero" aria-label="Panorama de Miami">
+  <section class="hero" aria-label="Horizonte de Miami">
     <div class="content">
-      <div class="pill">Miami • Comercial y Residencial • Comprar • Vender • Rentar • Invertir</div>
-      <h1>Bienes raíces con claridad y confianza.</h1>
+      <div class="pill">Miami • Comercial y Residencial • Comprar • Vender • Alquilar • Invertir</div>
+      <h1>Bienes raíces, con claridad y confianza.</h1>
       <p>Ayudo a empresas y familias a asegurar las propiedades correctas — desde parques industriales y almacenes hasta casas frente al mar — en Miami y en mercados globales.</p>
       <div class="cta">
-        <a class="btn" href="https://wa.me/17867738064?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20conversar%20sobre%20opciones%20comerciales%20o%20residenciales.">WhatsApp</a>
-        <a class="btn gold" href="tel:+17867738064">Llámame</a>
-        <a class="btn white" href="mailto:info@mariagabrielahernandez.com">Escríbeme</a>
+        <a class="btn" href="https://wa.me/17867738064?text=Hola%20Maria%2C%20me%20gustaria%20hablar%20sobre%20opciones%20comerciales%20o%20residenciales.">Escríbeme por WhatsApp</a>
+        <a class="btn gold" href="tel:+17867738064">Llamarme</a>
+        <a class="btn white" href="mailto:info@mariagabrielahernandez.com">Envíame un correo</a>
       </div>
     </div>
   </section>
@@ -466,28 +530,28 @@
       <h2>Propiedades destacadas</h2>
       <div class="grid cols-3">
         <article class="card">
-          <img src="https://images.pexels.com/photos/4277794/pexels-photo-4277794.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Interior de almacén clase A con estanterías altas">
+          <img src="https://images.pexels.com/photos/4277794/pexels-photo-4277794.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Interior de almacén de clase A con estanterías altas">
           <div class="body">
             <div class="eyebrow">Doral • Industrial • 15,000 pies²</div>
             <div class="price">$5,900,000 — Almacén</div>
           </div>
         </article>
         <article class="card">
-          <img src="https://images.pexels.com/photos/32812553/pexels-photo-32812553.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Exterior de condominio en torre moderna">
+          <img src="https://images.pexels.com/photos/32812553/pexels-photo-32812553.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Exterior de condominio en rascacielos moderno">
           <div class="body">
-            <div class="eyebrow">Brickell • 2 hab • 2 baños • 1,280 pies²</div>
+            <div class="eyebrow">Brickell • 2 Hab • 2 Baños • 1,280 pies²</div>
             <div class="price">$895,000 — Condominio</div>
           </div>
         </article>
         <article class="card">
           <img src="https://images.pexels.com/photos/3897529/pexels-photo-3897529.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Vista frente al mar con océano turquesa desde una cabaña">
           <div class="body">
-            <div class="eyebrow">Miami Beach • 3 hab • 3 baños • 2,050 pies²</div>
+            <div class="eyebrow">Miami Beach • 3 Hab • 3 Baños • 2,050 pies²</div>
             <div class="price">$2,450,000 — Frente al mar</div>
           </div>
         </article>
       </div>
-      <p class="small" style="margin-top:10px;">*Propiedades y precios de ejemplo para diseño — reemplaza con tu inventario.</p>
+      <p class="small" style="margin-top:10px;">*Propiedades y precios de muestra solo para el diseño — reemplaza con tu inventario.</p>
     </div>
   </section>
 
@@ -495,25 +559,25 @@
     <div class="wrap">
       <h2>Cómo te ayudo</h2>
       <div class="services">
-        <div class="service"><b>Comercial</b><br><span class="small">Parques industriales, almacenes, selección de sitio, arrendamientos y adquisiciones.</span></div>
+        <div class="service"><b>Comercial</b><br><span class="small">Parques industriales, almacenes, selección de sitios, arrendamientos y adquisiciones.</span></div>
         <div class="service"><b>Residencial</b><br><span class="small">Condominios, casas unifamiliares, lujo frente al mar, reubicaciones.</span></div>
-        <div class="service"><b>Venta</b><br><span class="small">Precio, preparación de la propiedad, fotografía y marketing multicanal.</span></div>
-        <div class="service"><b>Inversión</b><br><span class="small">Análisis, cap rates, reglas de alquiler a corto plazo y contactos de administración.</span></div>
+        <div class="service"><b>Vender</b><br><span class="small">Precio, preparación, fotografía y marketing multicanal.</span></div>
+        <div class="service"><b>Invertir</b><br><span class="small">Underwriting, cap rates, reglas de renta a corto plazo, contactos de administración de propiedades.</span></div>
       </div>
     </div>
   </section>
 
   <section id="about" class="about wrap">
     <div>
-      <h2>Conoce a María Gabriela</h2>
+      <h2>Conoce a Maria</h2>
       
       <div style="margin-bottom: var(--space-lg);">
-        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-sm); color: var(--ocean);">Experiencia Profesional</h3>
-        <p><b>María Gabriela Hernandez</b> es una profesional inmobiliaria en Miami con amplia experiencia en <b>propiedades comerciales</b> y <b>residenciales</b>. Se desempeñó como <b>Gerente General de Ventas y Negocios</b> en una desarrolladora y constructora, liderando proyectos y negociaciones en distintos mercados.</p>
+        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-sm); color: var(--ocean);">Trayectoria profesional</h3>
+        <p><b>Maria Gabriela Hernandez</b> es una profesional de bienes raíces en Miami con amplia experiencia en propiedades <b>comerciales</b> y <b>residenciales</b>. Se desempeñó como <b>Gerente General de Ventas y Negocios</b> para una desarrolladora y constructora, liderando proyectos y negociaciones en distintos mercados.</p>
       </div>
       
       <div style="margin-bottom: var(--space-lg);">
-        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-sm); color: var(--ocean);">Experiencia y Servicios</h3>
+        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-sm); color: var(--ocean);">Experiencia y servicios</h3>
         <ul style="margin: 0; padding-left: var(--space-md);">
           <li style="margin-bottom: var(--space-xs);"><b>Parques industriales</b> y <b>almacenes</b></li>
           <li style="margin-bottom: var(--space-xs);">Activos generadores de renta</li>
@@ -524,36 +588,36 @@
       
       <div style="margin-bottom: var(--space-lg);">
         <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-sm); color: var(--ocean);">Enfoque</h3>
-        <p>María es una negociadora nata y una aliada de confianza para operaciones de alto valor con estrategia clara y ejecución confiable.</p>
+        <p>Maria es una mujer de negocios por naturaleza y una aliada de confianza para transacciones serias, con estrategia clara y ejecución confiable.</p>
       </div>
       
       <p class="small" style="margin-bottom: var(--space-lg);">Idiomas: Inglés • Español</p>
       
       <div class="cta">
-        <a class="btn gold" href="https://wa.me/17867738064?text=Hola%20Maria%2C%20quiero%20agendar%20una%20consulta.">Agenda por WhatsApp</a>
+        <a class="btn gold" href="https://wa.me/17867738064?text=Hola%20Maria%2C%20me%20gustaria%20agendar%20una%20consulta.">Agenda por WhatsApp</a>
         <a class="btn white" href="mailto:info@mariagabrielahernandez.com">Solicitar información</a>
       </div>
     </div>
-    <img src="https://images.pexels.com/photos/13025284/pexels-photo-13025284.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Complejo empresarial moderno de vidrio con pasarela elevada">
+    <img src="https://images.pexels.com/photos/13025284/pexels-photo-13025284.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Complejo empresarial de vidrio moderno con pasarela aérea">
   </section>
 
   <section id="contact" class="contact">
     <div class="wrap">
       <h2>Contacto</h2>
-      <p style="margin-bottom: var(--space-md);"><span class="tag">Miami, Florida — Atención a clientes locales e internacionales</span></p>
+      <p style="margin-bottom: var(--space-md);"><span class="tag">Miami, Florida — Atendiendo a clientes locales e internacionales</span></p>
       
       <div style="margin-bottom: var(--space-lg);">
-        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-sm); color: #eaf5ff;">Información de Contacto</h3>
+        <h3 style="font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-sm); color: #eaf5ff;">Información de contacto</h3>
         <ul style="margin: 0; padding-left: var(--space-md); color: #eaf5ff;">
           <li style="margin-bottom: var(--space-sm);"><b>Teléfono:</b> <a href="tel:+17867738064">+1 (786) 773-8064</a></li>
           <li style="margin-bottom: var(--space-sm);"><b>Correo:</b> <a href="mailto:info@mariagabrielahernandez.com">info@mariagabrielahernandez.com</a></li>
-          <li style="margin-bottom: var(--space-sm);"><b>WhatsApp:</b> <a href="https://wa.me/17867738064?text=Hola%20Maria%2C%20estoy%20interesado%2Fa%20en%20bienes%20raíces%20en%20Miami.">Escríbeme</a></li>
+          <li style="margin-bottom: var(--space-sm);"><b>WhatsApp:</b> <a href="https://wa.me/17867738064?text=Hola%20Maria%2C%20estoy%20interesado%20en%20bienes%20raices%20en%20Miami.">Envíame un mensaje</a></li>
         </ul>
       </div>
       
       <div class="cta">
-        <a class="btn gold" href="https://wa.me/17867738064?text=Hola%20Maria%2C%20estoy%20interesado%2Fa%20en%20bienes%20raíces%20en%20Miami.">Comenzar</a>
-        <a class="btn white" href="tel:+17867738064">Llamar Ahora</a>
+        <a class="btn gold" href="https://wa.me/17867738064?text=Hola%20Maria%2C%20estoy%20interesado%20en%20bienes%20raices%20en%20Miami.">Empezar</a>
+        <a class="btn white" href="tel:+17867738064">Llamar ahora</a>
       </div>
     </div>
   </section>
@@ -566,35 +630,66 @@
 </footer>
 
 <script>
-// Navegación Móvil
+// Navegación móvil
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const navLinks = document.getElementById('navLinks');
 
-mobileMenuToggle.addEventListener('click', () => {
-  mobileMenuToggle.classList.toggle('active');
-  navLinks.classList.toggle('active');
+// Funcionalidad mejorada del menú móvil
+mobileMenuToggle.addEventListener('click', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  
+  const isActive = mobileMenuToggle.classList.contains('active');
+  
+  if (isActive) {
+    mobileMenuToggle.classList.remove('active');
+    navLinks.classList.remove('active');
+    document.body.style.overflow = '';
+  } else {
+    mobileMenuToggle.classList.add('active');
+    navLinks.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 });
 
-// Cerrar menú móvil al hacer clic en un enlace
+// Cerrar el menú móvil al hacer clic en un enlace
 document.querySelectorAll('.links a').forEach(link => {
   link.addEventListener('click', () => {
     mobileMenuToggle.classList.remove('active');
     navLinks.classList.remove('active');
+    document.body.style.overflow = '';
   });
 });
 
-// Cerrar menú móvil al hacer clic fuera
+// Cerrar el menú móvil al hacer clic fuera
 document.addEventListener('click', (e) => {
   if (!mobileMenuToggle.contains(e.target) && !navLinks.contains(e.target)) {
     mobileMenuToggle.classList.remove('active');
     navLinks.classList.remove('active');
+    document.body.style.overflow = '';
   }
 });
 
-// Actualizar año
+// Cerrar con tecla Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    mobileMenuToggle.classList.remove('active');
+    navLinks.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+});
+
+// Evitar scroll del body cuando el menú está abierto
+navLinks.addEventListener('touchmove', (e) => {
+  if (navLinks.classList.contains('active')) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+// Año dinámico
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Desplazamiento suave para enlaces de anclaje
+// Desplazamiento suave para anclas
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -607,15 +702,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Soporte táctil para el botón del menú
+mobileMenuToggle.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+}, { passive: false });
 </script>
 
 <!--
-Imágenes (Pexels — uso comercial gratuito):
-Hero (Miami skyline with bridge): https://images.pexels.com/photos/569093/pexels-photo-569093.jpeg
+Fuentes de imágenes (Pexels — uso comercial gratuito):
+Hero (skyline de Miami con puente): https://images.pexels.com/photos/569093/pexels-photo-569093.jpeg
 Pasillo de almacén: https://images.pexels.com/photos/4277794/pexels-photo-4277794.jpeg
-Condominio en torre: https://images.pexels.com/photos/32812553/pexels-photo-32812553.jpeg
+Exterior de condominio: https://images.pexels.com/photos/32812553/pexels-photo-32812553.jpeg
 Vista frente al mar: https://images.pexels.com/photos/3897529/pexels-photo-3897529.jpeg
-Edificio corporativo: https://images.pexels.com/photos/13025284/pexels-photo-13025284.jpeg
+Edificio corporativo moderno: https://images.pexels.com/photos/13025284/pexels-photo-13025284.jpeg
 -->
 </body>
 </html>
